@@ -58,49 +58,76 @@ bool c_config::init() {
 		}
 	}
 
+	//-> struct UWorld
 	item(Offsets.UWorld.OwningGameInstance, "UWorld.OwningGameInstance", m_items);
 	item(Offsets.UWorld.PersistentLevel, "UWorld.PersistentLevel", m_items);
 
+	//-> struct UGameInstance
 	item(Offsets.UGameInstance.LocalPlayers, "UGameInstance.LocalPlayers", m_items);
 
+	//-> struct UPlayer
 	item(Offsets.ULocalPlayer.PlayerController, "ULocalPlayer.PlayerController", m_items);
 
-	item(Offsets.APlayerController.CameraManager, "APlayerController.CameraManager", m_items);
+	//-> struct APlayerController
 	item(Offsets.APlayerController.Pawn, "APlayerController.Pawn", m_items);
+	item(Offsets.APlayerController.Character, "APlayerController.Character", m_items);
+	item(Offsets.APlayerController.CameraManager, "APlayerController.CameraManager", m_items);
 	item(Offsets.APlayerController.ControlRotation, "APlayerController.ControlRotation", m_items);
 
+	//-> struct AActor
 	item(Offsets.AActor.actorId, "AActor.actorId", m_items);
-	item(Offsets.AActor.HealthComponent, "AActor.HealthComponent", m_items);
-	item(Offsets.AActor.WieldedItemComponent, "AActor.WieldedItemComponent", m_items);
 	item(Offsets.AActor.rootComponent, "AActor.rootComponent", m_items);
 	item(Offsets.AActor.PlayerState, "AActor.PlayerState", m_items);
+	item(Offsets.AActor.WieldedItemComponent, "AActor.WieldedItemComponent", m_items);
+	item(Offsets.AActor.HealthComponent, "AActor.HealthComponent", m_items);
+	item(Offsets.AActor.DrowningComponent, "AActor.DrowningComponent", m_items);
 
-
+	//-> struct APlayerCameraManager
 	item(Offsets.APlayerCameraManager.CameraCache, "APlayerCameraManager.CameraCache", m_items);
 
+	//-> struct APlayerState
 	item(Offsets.APlayerState.PlayerName, "APlayerState.PlayerName", m_items);
+
+	//-> struct AItemProxy
 	item(Offsets.AItemProxy.AItemInfo, "AItemProxy.AItemInfo", m_items);
 
+	//-> struct AItemInfo
 	item(Offsets.AItemInfo.UItemDesc, "AItemInfo.UItemDesc", m_items);
 
+	//-> struct ABootyItemInfo
 	item(Offsets.ABootyItemInfo.BootyType, "ABootyItemInfo.BootyType", m_items);
 	item(Offsets.ABootyItemInfo.Rarity, "ABootyItemInfo.Rarity", m_items);
 
+	//-> struct AShip
+	item(Offsets.AShip.CrewOwnershipComponent,"AShip.CrewOwnershipComponent", m_items);
+	item(Offsets.AShip.ShipInternalWaterComponent,"AShip.ShipInternalWaterComponent", m_items);
+	item(Offsets.AShip.ShipOwningActor,"AShip.ShipOwningActor", m_items);
 
+	//-> struct ACannon
+	item(Offsets.ACannon.TimePerFire,"ACannon.TimePerFire", m_items);
+	item(Offsets.ACannon.CrewOwnershipComponent,"ACannon.ProjectileSpeed", m_items);
+	item(Offsets.ACannon.CrewOwnershipComponent,"ACannon.ProjectileGravityScale", m_items);
+	item(Offsets.ACannon.CrewOwnershipComponent,"ACannon.ServerPitch", m_items);
 
-	item(Offsets.AShip.CrewOwnershipComponent,"AShip.CrewOwnershipComponent" ,m_items);
-	item(Offsets.UCrewOwnershipComponent.CrewId,"UCrewOwnershipComponent.CrewId" ,m_items);
+	//-> struct UCrewOwnershipComponent
+	item(Offsets.UCrewOwnershipComponent.CrewId,"UCrewOwnershipComponent.CrewId", m_items);
 
-	item(Offsets.ACrewService.Crews,"ACrewService.Crews",m_items);
+	//-> struct UCrewOwnershipComponent
+	item(Offsets.ACrewService.Crews,"ACrewService.Crews", m_items);
 
-	item(Offsets.AMapTable.MapPins,"AMapTable.MapPins" ,m_items);
-	item(Offsets.AMapTable.ServerCenter,"AMapTable.ServerCenter" ,m_items);
-	item(Offsets.AMapTable.TrackedShips,"AMapTable.TrackedShips" ,m_items);
+	//-> struct AFauna
+	item(Offsets.AFauna.Name,"AFauna.Name", m_items);
 
-	item(Offsets.UWieldedItemComponent.WieldedItem,"UWieldedItemComponent.WieldedItem" ,m_items);
+	//-> struct AMaptTable
+	item(Offsets.AMapTable.MapPins,"AMapTable.MapPins", m_items);
+	item(Offsets.AMapTable.ServerCenter,"AMapTable.ServerCenter", m_items);
+	item(Offsets.AMapTable.TrackedShips,"AMapTable.TrackedShips", m_items);
+
+	//-> struct UWieldedItemComponent
+	item(Offsets.UWieldedItemComponent.WieldedItem,"UWieldedItemComponent.WieldedItem", m_items);
+
+	//-> struct AWieldableItem
 	item(Offsets.AWieldableItem.ItemInfo, "AWieldableItem.ItemInfo",m_items);
-
-	item(Offsets.AFauna.Name,"AFauna.Name" ,m_items);
 
 	return true;
 }
