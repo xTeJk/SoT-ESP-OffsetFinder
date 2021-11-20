@@ -1,2 +1,5 @@
 # SoT-ESP-OffsetFinder
-...some more learning from copy pasta
+
+Updated for https://github.com/xTeJk/SoT_External_Tool_Premium  
+  
+Dump offsets from SDK and convert them to hexadecimal
